@@ -1,0 +1,14 @@
+:root {
+    --violet-doux: #6c63ff;
+    --violet-fonce: #534EDD;
+    --orange-vif: #ffa726;
+    --gris-très-fonce: #666;
+    --gris-très-clair: #f8f8f8;
+    --gris-clair: #EEE;
+
+    
+}
+
+h1{
+    color: var(--orange-vif);
+}
