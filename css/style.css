@@ -225,3 +225,729 @@ section h2 {
     color: var(--orange-vif);
     transform: translateY(-3px);
  }
+/* --- VARIABLES ET RESET --- */
+:root {
+    --violet-doux: #6c63ff;
+    --violet-fonce: #534EDD;
+    --orange-vif: #ffa726;
+    --gris-très-fonce: #333;
+    --gris-fonce: #666;
+    --gris-très-clair: #f8f8f8;
+    --gris-clair: #EEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gris-clair);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--gris-très-fonce);
+}
+
+/* --- HEADER ET NAVIGATION --- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+header div a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--violet-doux);
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    margin-left: 25px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--gris-très-fonce);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+ul li a:hover, ul li a.active {
+    color: var(--violet-doux);
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--violet-doux);
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after, ul li a.active::after {
+    width: 100%;
+}
+
+/* --- TITRES DE SECTION --- */
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section h2::after { 
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 0.8rem auto;
+    border-radius: 2px;
+}
+
+/* --- VARIABLES ET RESET --- */
+:root {
+    --violet-doux: #6c63ff;
+    --violet-fonce: #534EDD;
+    --orange-vif: #ffa726;
+    --gris-très-fonce: #333;
+    --gris-fonce: #666;
+    --gris-très-clair: #f8f8f8;
+    --gris-clair: #EEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gris-clair);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--gris-très-fonce);
+}
+
+/* --- HEADER ET NAVIGATION --- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+header div a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--violet-doux);
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    margin-left: 25px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--gris-très-fonce);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+ul li a:hover, ul li a.active {
+    color: var(--violet-doux);
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--violet-doux);
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after, ul li a.active::after {
+    width: 100%;
+}
+
+/* --- TITRES DE SECTION --- */
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section h2::after { 
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 0.8rem auto;
+    border-radius: 2px;
+}
+
+/* --- GRILLE DE PROJETS --- */
+.projets-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+/* --- CARTES DE PROJET (CARDS) --- */
+.projet-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.projet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: var(--violet-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- BADGES (TAGS) --- */
+.tags {
+    margin-top: auto;
+    margin-bottom: 1.2rem;
+}
+
+.tags span {
+    background-color: #f0efff;
+    color: var(--violet-doux);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 6px;
+    border: 1px solid #e0dfff;
+}
+
+/* --- LIENS DANS LES CARTES --- */
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gris-clair);
+}
+
+.card-links a {
+    text-decoration: none;
+    color: var(--gris-très-fonce);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.card-links a:hover {
+    color: var(--violet-doux);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 5rem;
+    background-color: var(--violet-doux);
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.2s, color 0.2s;
+}
+
+footer a:hover {
+    color: var(--orange-vif);
+    transform: translateY(-3px);
+}
+
+/* --- PAGE CONTACT --- */
+.contact-section {
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.contact-container {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Pour le mobile */
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 span {
+    color: var(--violet-doux);
+}
+
+.info-details {
+    margin-top: 2rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--violet-doux);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    flex: 1.2;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: var(--gris-très-clair);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+/* --- NOUVELLE PAGE DIVERTISSEMENT --- */
+.divertissement-section {
+    max-width: 1400px; /* Un peu plus large pour 6 éléments */
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.div-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.div-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--violet-doux);
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+}
+
+.sub-intro {
+    color: var(--gris-fonce);
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* --- GRILLE IMMERSIVE --- */
+.divertissement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem; /* Petit gap pour un look "moodboard" */
+}
+
+/* --- CARTES AVEC IMAGE DE FOND --- */
+.div-card {
+    position: relative;
+    height: 450px; /* Hauteur fixe pour les cartes */
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.div-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2);
+}
+
+/* --- OVERLAY SOMBRE ET INTERACTIF --- */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.1) 60%);
+    display: flex;
+    align-items: flex-end; /* Texte en bas */
+    padding: 2.5rem;
+    transition: background 0.3s ease;
+}
+
+.div-card:hover .card-overlay {
+    background: linear-gradient(to top, rgba(108, 99, 255, 0.95) 10%, rgba(0,0,0,0.3) 70%);
+}
+
+/* --- CONTENU DE LA CARTE --- */
+.card-content {
+    color: white;
+    transform: translateY(100px); /* Texte caché par défaut */
+    transition: transform 0.4s ease-out;
+}
+
+.div-card:hover .card-content {
+    transform: translateY(0); /* Texte révélé au survol */
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+    opacity: 0.8;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: white; /* Force le titre en blanc */
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* --- ADAPTATIONS MOBILE --- */
+@media (max-width: 768px) {
+    .div-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .div-card {
+        height: 350px;
+    }
+    
+    .divertissement-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
+/* ============================================================
+   --- NOUVELLE PAGE PASSIONS (DESIGN BENTO/AGENCE) ---
+============================================================ */
+
+.passions-section-new {
+    max-width: 1300px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.passions-header-new {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.passions-header-new h2 {
+    font-size: 3rem;
+    color: var(--violet-doux);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.title-underline-new {
+    width: 90px;
+    height: 5px;
+    background-color: var(--violet-doux);
+    margin: 0 auto 2rem;
+    border-radius: 3px;
+}
+
+.sub-intro-new {
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- GRILLE ASYMÉTRIQUE (BENTO BOX) --- */
+.passions-grid-new {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr; /* Colonne de gauche plus large */
+    grid-template-rows: 1fr 1fr; /* Deux lignes de hauteur égale */
+    gap: 1.5rem;
+    height: 650px; /* Hauteur totale fixe pour la grille */
+}
+
+/* --- CARTE VEDETTE (featured) - Prend toute la hauteur à gauche --- */
+.passion-card-new.featured {
+    grid-row: 1 / -1; /* S'étend de la ligne 1 à la fin */
+}
+
+/* --- STYLE DE BASE DES CARTES --- */
+.passion-card-new {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.passion-card-new:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
+}
+
+/* --- OVERLAY SOMBRE AVEC DÉGRADÉ --- */
+.card-overlay-new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dégradé pour le texte en bas */
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 5%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%);
+    display: flex;
+    align-items: flex-end; /* Texte en bas */
+    padding: 3rem;
+    transition: background 0.3s ease;
+}
+
+.passion-card-new:hover .card-overlay-new {
+    /* Change de couleur subtilement au survol */
+    background: linear-gradient(to top, rgba(108, 99, 255, 0.95) 5%, rgba(0,0,0,0.4) 60%);
+}
+
+/* --- CONTENU DE LA CARTE --- */
+.card-content-new {
+    color: white;
+    transform: translateY(20px);
+    opacity: 0.9;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.passion-card-new:hover .card-content-new {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- NUMÉRO DE LA PASSION --- */
+.card-number-new {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--violet-doux);
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-content-new h3 {
+    font-size: 2rem;
+    color: white; /* Force le titre en blanc */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.card-content-new p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* --- Ajustement du texte pour la grande carte --- */
+.passion-card-new.featured .card-content-new h3 {
+    font-size: 2.5rem;
+}
+
+.passion-card-new.featured .card-content-new p {
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+/* ============================================================
+   --- ADAPTATIONS MOBILE (RESPONSIVE) ---
+============================================================ */
+
+@media (max-width: 992px) {
+    .passions-header-new h2 {
+        font-size: 2.5rem;
+    }
+    
+    .passions-grid-new {
+        height: auto; /* Laisse la hauteur s'adapter */
+        grid-template-columns: 1fr; /* Une seule colonne */
+        grid-template-rows: auto; /* Hauteur auto pour les lignes */
+        gap: 2rem;
+    }
+    
+    .passion-card-new {
+        height: 400px; /* Hauteur fixe pour chaque carte sur mobile */
+    }
+    
+    .passion-card-new.featured {
+        grid-row: auto; /* Annule l'extension sur toute la hauteur */
+    }
+}
+
+@media (max-width: 768px) {
+     .passions-header-new h2 {
+        font-size: 2.2rem;
+    }
+    
+    .sub-intro-new {
+        font-size: 1.1rem;
+    }
+    
+    .card-overlay-new {
+        padding: 2rem;
+    }
+    
+    .card-content-new h3 {
+        font-size: 1.6rem;
+    }
+    
+    .passion-card-new.featured .card-content-new h3 {
+        font-size: 1.8rem;
+    }
+}
